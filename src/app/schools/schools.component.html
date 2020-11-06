@@ -1,0 +1,54 @@
+<h1 class="mt-2">{{title}}</h1>
+
+
+
+
+<form id="userlist" class="form" *ngIf="!edited">
+
+	<ul class="nav">
+		<li class="nav-item"><span class="nav-link link" (click)="add()" style="cursor: pointer">Register</span></li>
+		<li class="nav-item"><span class="nav-link link" (click)="add()" style="cursor: pointer">Remove</span></li>
+	</ul>
+
+	<div class="form-group">
+		<div class="input-group">
+			<input type="text" class="form-control"/>
+			<div class="input-group-append">
+				<button class="btn btn-outline-secondary">Search</button> 
+			</div>
+		</div>
+	</div>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th style= "width: 1em" scope="col">#</th>
+				<th scope="col">School Name</th>
+			</tr>
+		</thead>
+
+		<tbody>
+
+			<tr class="row-link">
+				<td><input type="checkbox" style="text-align: center"/></td>
+	 			<td (click)="edit()">School1</td>
+			</tr>
+
+			<tr class="row-link">
+				<td><input type="checkbox" style="text-align: center"/></td>
+	 			<td (click)="edit()">School2</td>
+			</tr>
+
+			<tr class="row-link">
+				<td><input type="checkbox" style="text-align: center"/></td>
+	 			<td (click)="edit()">School3</td>
+			</tr>
+
+			<tr class="row-link">
+				<td><input type="checkbox" style="text-align: center"/></td>
+	 			<td (click)="edit()">School4</td>
+			</tr>
+
+		</tbody>
+	</table>
+</form>

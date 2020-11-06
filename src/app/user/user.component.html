@@ -1,0 +1,81 @@
+<h1 class="mt-2">{{title}}</h1>
+
+<div class="row justify-content-md-center">
+	<div class="col-6">
+
+		<form *ngIf="edited">
+
+			<div class="form-group">
+				<label for="username">User Name</label>
+				<input type="text" id="username" class="form-control"[(ngModel)]="username" name="username"/>
+			</div>
+
+			<div class="form-group">
+				<label for="password">Password</label>
+				<input type="password" id="password" class="form-control" [(ngModel)]="password" name="password"/>
+			</div>
+
+			<div class="form-group">
+				<label for="passwordconfirm">Confirm Password</label>
+				<input type="password" id="passwordconfirm" class="form-control" name="passwordconfirm"/>
+			</div>
+
+			<div class="form-group">
+				<label for="school">School</label>
+				<select class="form-control" id="school">
+					<option>School1</option>
+					<option>School2</option>
+					<option>School3</option>
+					<option>School4</option>
+				</select>
+			</div>
+
+			<div class="form-group form-check mt-4">
+				<input type="checkbox" class="form-check-input" id="adminCheck">
+				<label class="form-check-label" for="adminCheck">Administrator</label>
+			</div>
+			
+			<div class="mt-4">
+				<button class="btn btn-success mr-2" (click)="save()" >Create Accout</button>
+				<button class="btn btn-secondary" (click)="save()" >Cancel</button>
+			</div>
+
+		</form>
+	</div>
+</div>
+
+<form id="userlist" class="form" *ngIf="!edited">
+
+	<ul class="nav">
+		<li class="nav-item"><span class="nav-link link" (click)="add()" style="cursor: pointer">Register</span></li>
+		<li class="nav-item"><span class="nav-link link" (click)="add()" style="cursor: pointer">Remove User</span></li>
+	</ul>
+
+	<div class="form-group">
+		<div class="input-group">
+			<input type="text" class="form-control"/>
+			<div class="input-group-append">
+				<button class="btn btn-outline-secondary">Search</button> 
+			</div>
+		</div>
+	</div>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th style= "width: 1em" scope="col">#</th>
+				<th scope="col">User</th>
+				<th style="text-align: center; width: 8em" scope="col">Role</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr class="row-link">
+				<td><input type="checkbox" style="text-align: center"/></td>
+				<td>admin</td>
+				<td style="text-align: center">Administrator</td>
+			</tr>
+		</tbody>
+	</table>
+
+</form>
