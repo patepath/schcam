@@ -13,7 +13,6 @@ import { SubjectsComponent } from './subjects/subjects.component';
 import { UserComponent } from './user/user.component';
 import { ParentsComponent } from './parents/parents.component';
 
-
 const appRoute: Routes = [
 	{ path: '', redirectTo: '/students', pathMatch: 'full' }, 
 	{ path: 'students', component: StudentsComponent }, 
